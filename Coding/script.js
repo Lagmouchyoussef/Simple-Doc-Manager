@@ -1,5 +1,7 @@
+
 let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
 console.log('Contacts loaded from localStorage:', contacts);
+
 
 const nomInput = document.getElementById('nameInput');
 const numInput = document.getElementById('phoneInput');
@@ -23,13 +25,17 @@ console.log('DOM elements found:', {
   messageDiv
 });
 
+
 document.addEventListener('DOMContentLoaded', afficherContacts);
 
+
 function validerContact(nom, num) {
+    
     if (!nom || nom.trim().length < 2) {
         throw new Error('Le nom doit contenir au moins 2 caractères.');
     }
 
+ 
     const numRegex = /^\d{10}$/;
     if (!numRegex.test(num)) {
         throw new Error('Le numéro doit contenir exactement 10 chiffres.');
@@ -42,7 +48,7 @@ function validerContact(nom, num) {
     }
 
     const existe = contacts.some(contact =>
-        contact.nom.toLowerCase() === nom.toLowerCase() || 
+        contact.nom.toLowerCase() === nom.toLowerCase() ||
         contact.num === num
     );
     if (existe) {
