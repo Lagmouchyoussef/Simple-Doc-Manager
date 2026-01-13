@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Phone Directory</h1>
+      <p class="subtitle">DOM • Exceptions • JSON • localStorage • Async</p>
+    </header>
+
+    <!-- Messages (succès / erreur) -->
+    <div id="messageBox" class="message hidden" role="alert"></div>
+
+    <section class="card">
+      <h2>Add a contact</h2>
+
+      <form id="contactForm" autocomplete="off">
+        <div class="grid">
+          <div class="field">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" placeholder="E.g.: John" />
+          </div>
+
+          <div class="field">
+            <label for="phoneInput">Number</label>
+            <input type="text" id="phoneInput" placeholder="Ex: 0612345678" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="addBtn">Add</button>
+          <button type="button" id="clearFormBtn" class="btn-secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Search</h2>
+
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Type a name to search..." />
+        <button type="button" id="searchBtn">Search</button>
+        <button type="button" id="resetSearchBtn" class="btn-secondary">Reset</button>
+      </div>
+
+      <div id="searchResult" class="search-result hidden"></div>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>List of contacts</h2>
+        <div class="right">
+          <span class="count">Total: <strong id="count">0</strong></span>
+          <button type="button" id="sortBtn" class="btn-secondary">Sort A → Z</button>
+          <button type="button" id="clearAllBtn" class="btn-danger">Delete All</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="contactsBody">
+            <!-- Filled via DOM -->
+          </tbody>
+        </table>
+      </div>
+
+      <p id="emptyState" class="empty">
+        No contacts yet. Add your first contact
+      </p>
+    </section>
+
+    <footer class="footer">
+      <small>JavaScript Practical Exam — Phone Directory</small>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
