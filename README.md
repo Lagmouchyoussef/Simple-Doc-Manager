@@ -13,7 +13,7 @@ It features a clean user interface with real-time search, CRUD (Create, Read, Up
 
 ## 📸 Screenshots
 
-> *(Note: You can add a screenshot of your app here to make it look better!)*
+<img width="1550" height="844" alt="Image" src="https://github.com/user-attachments/assets/8a24264e-2ca2-4afd-9da5-0f45242717f2" />
 
 ---
 
